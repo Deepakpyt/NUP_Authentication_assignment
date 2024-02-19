@@ -13,7 +13,7 @@ const dotenv = require('dotenv');
 /**
  * Get port from environment and store in Express.
  */
-
+dotenv.config();
 var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
@@ -24,7 +24,7 @@ app.set('port', port);
 var server = http.createServer(app);
 
 // Connecting to the MongoDB  database...
-dotenv.config();
+
 async function connectToDatabase() {
   try {
     console.log("Wait until it shows Listening and Connected to MongoDB...")
