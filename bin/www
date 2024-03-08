@@ -28,7 +28,7 @@ var server = http.createServer(app);
 async function connectToDatabase() {
   try {
     console.log("Wait until it shows Listening and Connected to MongoDB...")
-    await mongoose.connect(`${process.env.MONGO_DATABASE}`);
+    await mongoose.connect(`${process.env.MONGO_DATABASE}/users`);
 
     /**
      * Listen on provided port, on all network interfaces.
